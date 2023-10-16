@@ -1,6 +1,8 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
+import { useRouter } from "next/router";
+import { useCallback } from "react";
 
 interface Repo {
   name: string;
@@ -16,14 +18,26 @@ export const getServerSideProps: GetServerSideProps<{ repo: Repo }> = async (
   return { props: { repo } };
 };
 
-function Greet(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const { repo } = props;
+function Greet({
+  repo,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const router = useRouter();
+
+  const goToGreetIndex = useCallback(() => {
+    router.push({
+      pathname: "http://localhost:3000/greet",
+    });
+  }, []);
+
   return (
     <div className={styles.rootdiv}>
-      <h1> Hello, {repo.name}!</h1>
-      <h1> repo.description = {repo.description}!</h1>
-      <h1> repo.fork = {repo.fork.toString()}!</h1>
-      <Link href="http://localhost:3000">go to home</Link>
+      <h3> Hello, {repo.name}!</h3>
+      <h3> repo.description = {repo.description}!</h3>
+      <h3> repo.fork = {repo.fork.toString()}!</h3>
+      <div onClick={goToGreetIndex}>
+        <p>→ greet Index</p>
+      </div>
+      <Link href="http://localhost:3000">→ home</Link>
     </div>
   );
 }
