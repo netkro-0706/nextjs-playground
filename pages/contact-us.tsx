@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Widget from "../components/widget";
 
 function ContactPage() {
   return (
@@ -12,7 +13,7 @@ function ContactPage() {
       <div>
         <ul className="non-style-list">
           <li>
-            <Link href="http://localhost:3000">←</Link>
+            <Link href="/">←</Link>
           </li>
           <li>Email: mymail@example.com</li>
           <li>name: name</li>
@@ -26,6 +27,10 @@ function ContactPage() {
           objectFit="cover"
           alt="The unsplash image"
         />
+      </div>
+
+      <div>
+        <Widget pageName="contact" />
       </div>
     </div>
   );
