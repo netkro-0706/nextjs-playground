@@ -19,8 +19,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   context
 ) => {
   const { slug } = context.query;
+  console.log("aaaaa", context.query);
   const post = posts.find((p) => p.slug === slug);
 
+  //포스트가 없으면 404반환
   if (!post) {
     return {
       notFound: true,
