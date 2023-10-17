@@ -15,6 +15,16 @@ a {
   box-sizing: border-box;
 }
 
+.rootdiv {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.non-style-list {
+  list-style: none;
+  padding: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
