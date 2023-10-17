@@ -37,7 +37,7 @@ function Greet({
       <div onClick={goToGreetIndex}>
         <p>→ greet Index</p>
       </div>
-      <Link href="http://localhost:3000">→ home</Link>
+      <Link href="/">→ home</Link>
     </div>
   );
 }

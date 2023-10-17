@@ -12,7 +12,7 @@ function WaktaversePage() {
       <div>
         <ul className="non-style-list">
           <li>
-            <Link href="http://localhost:3000">←</Link>
+            <Link href="/">←</Link>
           </li>
           <li>WakTaVerse</li>
         </ul>
