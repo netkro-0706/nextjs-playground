@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Widget from "../components/widget";
@@ -6,10 +5,6 @@ import Widget from "../components/widget";
 function ContactPage() {
   return (
     <div>
-      <Head>
-        <title>Nextjs Playground</title>
-      </Head>
-
       <div>
         <ul className="non-style-list">
           <li>
