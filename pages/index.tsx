@@ -11,25 +11,7 @@ const Home: NextPage = () => {
         <title>Nextjs Playground</title>
       </Head>
 
-      <p>Hello nextjs</p>
-      <Link href="/greet/">
-        <p>route variable - index</p>
-      </Link>
-      <Link href="/greet/[slug]" as="/greet/hello">
-        <p>route variable - slug</p>
-      </Link>
-      <Link href="/contact-us">
-        <p>contact-us</p>
-      </Link>
-      <Link href="/blog/[slug]" as="/blog/about-rottweiler">
-        <p>blog</p>
-      </Link>
-      <Link href="/waktaverse">
-        <p>waktaverse</p>
-      </Link>
-      <div>
-        <Widget pageName="index" />
-      </div>
+      <h1>Welcom to nextjs playground page</h1>
     </div>
   );
 };
