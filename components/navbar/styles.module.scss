@@ -1,0 +1,21 @@
+.title {
+  color: red;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  & .nav_list {
+    display: flex;
+    float: left;
+    & p {
+      margin-right: 20px;
+      text-decoration: underline;
+    }
+    & .widget_box {
+      margin-top: 16px;
+    }
+  }
+}

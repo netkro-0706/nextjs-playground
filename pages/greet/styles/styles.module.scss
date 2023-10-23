@@ -1,0 +1,29 @@
+@mixin custom-font($font-color, $bg-color: green) {
+  font-size: 25px;
+  font-weight: 800;
+  color: $font-color;
+  background-color: $bg-color;
+  padding: 5px;
+}
+
+$change-font-size: 20px;
+
+.content {
+  p {
+    width: max-content;
+    background-color: gray;
+
+    &:nth-child(1) {
+      background-color: tomato;
+    }
+    &:nth-child(2) {
+      font-size: $change-font-size;
+    }
+    &:nth-child(3) {
+      font-size: $change-font-size;
+    }
+    &:nth-child(4) {
+      @include custom-font(rgb(247, 163, 163));
+    }
+  }
+}

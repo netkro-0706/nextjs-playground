@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Widget from "../widget";
-import styles from "../styles/Home.module.css";
+import styles from "./styles.module.scss";
 
 function Navbar() {
   return (
-    <div className="navbar rootdiv">
-      <div>Nextjs Playground</div>
-      <div className="nav-list">
+    <div className={`${styles.navbar} rootdiv`}>
+      <div className={styles.title}>Nextjs Playground</div>
+      <div className={styles.nav_list}>
         <Link href="/greet/">
           <p>route variable - index</p>
         </Link>
@@ -22,7 +22,7 @@ function Navbar() {
         <Link href="/waktaverse">
           <p>waktaverse</p>
         </Link>
-        <div className="widget-box">
+        <div className={styles.widget_box}>
           <Widget pageName="index" />
         </div>
       </div>

@@ -1,8 +1,8 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Link from "next/link";
-import styles from "../../styles/Home.module.css";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
+import styles from "./styles/styles.module.scss";
 
 interface Repo {
   name: string;
@@ -30,10 +30,13 @@ function Greet({
   }, []);
 
   return (
-    <div className={styles.rootdiv}>
-      <h3> Hello, {repo.name}!</h3>
-      <h3> repo.description = {repo.description}!</h3>
-      <h3> repo.fork = {repo.fork.toString()}!</h3>
+    <div className={`rootdiv`}>
+      <div className={styles.content}>
+        <p> Hello, {repo.name}!</p>
+        <p> repo.description = {repo.description}!</p>
+        <p> repo.fork = {repo.fork.toString()}!</p>
+        <p> The test text </p>
+      </div>
       <div onClick={goToGreetIndex}>
         <p>→ greet Index</p>
       </div>

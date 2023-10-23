@@ -20,24 +20,6 @@ a {
   margin-top: 15px;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  & .nav-list {
-    display: flex;
-    float: left;
-    & p {
-      margin-right: 20px;
-      text-decoration: underline;
-    }
-    & .widget-box {
-      margin-top: 16px;
-    }
-  }
-}
-
 .non-style-list {
   list-style: none;
   padding: 0;
